@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.slidingpanelayout.widget.SlidingPaneLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sliding_pane_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ContactsListFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/contacts_list"
+        android:layout_width="@dimen/fragment_contacts_list_container_width"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/contact_detail_container"
+        android:name="com.example.astonintensive5.ui.ContactDetailFragment"
+        android:layout_width="@dimen/fragment_contacts_detail_container_width"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+</androidx.slidingpanelayout.widget.SlidingPaneLayout>
